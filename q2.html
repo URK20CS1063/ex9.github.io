@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script>
+        var app = angular.module('myapp', ['ngRoute']);
+        app.config(function($routeProvider){
+            $routeProvider.when('/login', {
+                templateUrl: 'login.html'
+            })
+            .when('/register', {
+                templateUrl: 'register.html'
+            })
+            .when('/about', {
+                templateUrl: 'about.html'
+            })
+            .when('/contact', {
+                templateUrl: 'contact.html'
+            })
+        });
+    </script>
+</head>
+<body ng-app="myapp">
+    <h1>NPTEL</h1>
+    <hr>
+    <div class="sidebar">
+        <a href="#!login">Login</a>
+        <a href="#!register">Sign Up</a>
+        <a href="#!contact">Contact</a>
+        <a href="#!about">About Us</a>
+    </div>
+    <div class="content" ng-view>
+
+    </div>
+</body>
+</html>
+
+<h1>Login Here!!!</h1>
+<br>
+<form>
+    Email: <input type="text"><br><br>
+    Password: <input type="password"><br><br>
+    <button type="submit">Login</button>
+</form>
+
+<h1>Welcome to New User Registration!</h1>
+<br>
+<form>
+    Name: <input type="text"><br><br>
+    Email: <input type="email"><br><br>
+    Phone: <input type="text"><br><br>
+    Password: <input type="password"><br><br>
+    <button type="submit">Register</button>
+</form>
+
+<h1>Contact</h1>
+<div style="padding: 30px;">
+    <p>Mobile Number: 9999999999</p>
+    <a href="https://www.facebook.com/" style="margin-left: 0; background-color: c#2c6051; color: white; font-weight: bold;">Facebook</a>
+    <a href="https://www.instagram.com/" style="margin-left: 0; background-color: #2c6051; color: white; font-weight: bold;">instagram</a>
+</div>
+
+<h1>About Us</h1>
+<br>
+<p>&emsp;&emsp;&emsp;National Programme on Technology Enhanced Learning (NPTEL) is a project of MHRD initiated by seven Indian Institutes of Technology (Bombay, Delhi, Kanpur, Kharagpur, Madras, Guwahati and Roorkee) along with the Indian Institute of Science, Bangalore in 2003, to provide quality education to anyone interested in learning</p>
+
